@@ -17,6 +17,9 @@ public class Purse {
         @Column(columnDefinition = "TEXT NOT NULL")
         private String description;
 
+        @ManyToOne
+        public Closet closet;
+
         public Purse() {
         }
 

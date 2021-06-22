@@ -3,7 +3,7 @@ package com.portfolio.ann.models;
 import javax.persistence.*;
 
 @Entity
-@Table(name="dresses")
+@Table(name = "dresses")
 public class Dress {
 
 
@@ -17,13 +17,17 @@ public class Dress {
     @Column(columnDefinition = "TEXT NOT NULL")
     private String description;
 
+    @ManyToOne
+    public Closet closet;
+
     public Dress() {
     }
 
-    public Dress(long id, String title, String description) {
+    public Dress(long id, String title, String description, Closet closet) {
         this.id = id;
         this.title = title;
         this.description = description;
+        this.closet = closet;
     }
 
     public long getId() {
@@ -48,5 +52,13 @@ public class Dress {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public Closet getCloset() {
+        return closet;
+    }
+
+    public void setCloset(Closet closet) {
+        this.closet = closet;
     }
 }

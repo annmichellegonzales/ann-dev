@@ -2,9 +2,8 @@ package com.portfolio.ann.models;
 
 import javax.persistence.*;
 
-
 @Entity
-@Table(name="makeup")
+@Table(name = "makeup")
 public class Makeup {
 
     @Id
@@ -17,13 +16,17 @@ public class Makeup {
     @Column(columnDefinition = "TEXT NOT NULL")
     private String description;
 
+    @ManyToOne
+    public Closet closet;
+
     public Makeup() {
     }
 
-    public Makeup(long id, String title, String description) {
+    public Makeup(long id, String title, String description, Closet closet) {
         this.id = id;
         this.title = title;
         this.description = description;
+        this.closet = closet;
     }
 
     public long getId() {
@@ -48,5 +51,13 @@ public class Makeup {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public Closet getCloset() {
+        return closet;
+    }
+
+    public void setCloset(Closet closet) {
+        this.closet = closet;
     }
 }

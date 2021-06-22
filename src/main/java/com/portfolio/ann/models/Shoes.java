@@ -17,6 +17,9 @@ public class Shoes {
     @Column(columnDefinition = "TEXT NOT NULL")
     private String description;
 
+    @ManyToOne
+    public Closet closet;
+
     public Shoes() {
     }
 
@@ -48,5 +51,13 @@ public class Shoes {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public Closet getCloset() {
+        return closet;
+    }
+
+    public void setCloset(Closet closet) {
+        this.closet = closet;
     }
 }
