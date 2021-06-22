@@ -37,9 +37,9 @@ public class Closet {
 
     @ManyToMany(cascade = CascadeType.ALL)
     @JoinTable(
-            name = "closet-categories",
+            name = "closet_categories",
             joinColumns = {@JoinColumn(name = "closet_id")},
-            inverseJoinColumns = {@JoinColumn(name = "categories_id")}
+            inverseJoinColumns = {@JoinColumn(name = "category_id")}
     )
     private List<Category> closetCategories;
 
@@ -51,6 +51,19 @@ public class Closet {
         email = copy.email;
         closetName = copy.closetName;
         password = copy.password;
+    }
+
+    public Closet(long id, String closetName, String email, String password, List<Dress> dressList, List<Purse> purseList, List<Jewellery> jewelleryList, List<Makeup> makeupList, List<Shoes> shoesList, List<Category> closetCategories) {
+        this.id = id;
+        this.closetName = closetName;
+        this.email = email;
+        this.password = password;
+        this.dressList = dressList;
+        this.purseList = purseList;
+        this.jewelleryList = jewelleryList;
+        this.makeupList = makeupList;
+        this.shoesList = shoesList;
+        this.closetCategories = closetCategories;
     }
 
     public long getId() {
