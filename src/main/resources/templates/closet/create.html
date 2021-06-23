@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html id="create-closet.html" xmlns:th="http://www.thymeleaf.org"
+      lang="en">
+<head th:replace="partials/head :: head('Create a Closet')">
+    <link rel="stylesheet" th:href="@{/main.css}">
+</head>
+<body>
+<nav th:replace="partials/navbar :: navbar"></nav>
+
+<h1>Create a Closet</h1>
+
+
+<!--<form th:action="@{/closet/create.html}" method="POST" th:object="${closet}">-->
+<!--    <label for="closetName">Username</label>-->
+<!--    <input id="closetName" th:field="*{closetName}" />-->
+
+<!--    <label for="email">Email</label>-->
+<!--    <input id="email" th:field="*{email}" />-->
+
+<!--    <label for="password">Password</label>-->
+<!--    <input id="password" type="password" th:field="*{password}" />-->
+
+<!--    <input value="Get started!" type="submit" />-->
+<!--</form>-->
+
+<script th:replace="partials/scripts :: scripts"></script>
+</body>
+</html>

@@ -1,4 +1,9 @@
 package com.portfolio.ann.repositories;
 
-public class ClosetRepository {
+import com.portfolio.ann.models.Closet;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface ClosetRepository extends JpaRepository<Closet, Long> {
+    Closet findByClosetName(String closetName);
+    Closet findByEmail(String email);
 }

@@ -115,7 +115,6 @@
                     <addResources>true</addResources>
                 </configuration>
             </plugin>
-
         </plugins>
     </build>
 
