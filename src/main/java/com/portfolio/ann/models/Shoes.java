@@ -17,6 +17,15 @@ public class Shoes {
     @Column(columnDefinition = "TEXT NOT NULL")
     private String description;
 
+    @Column(nullable = false)
+    private String material;
+
+    @Column(nullable = false)
+    private String brand;
+
+    @Column(nullable = false)
+    private String occasion;
+
     @ManyToOne
     public Closet closet;
 

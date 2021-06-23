@@ -4,52 +4,97 @@ import javax.persistence.*;
 
 
 @Entity
-@Table(name="dresses")
+@Table(name = "dresses")
 public class Purse {
 
-        @Id
-        @GeneratedValue(strategy = GenerationType.IDENTITY)
-        private long id;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private long id;
 
-        @Column(nullable = false)
-        private String title;
+    @Column(nullable = false)
+    private String title;
 
-        @Column(columnDefinition = "TEXT NOT NULL")
-        private String description;
+    @Column(columnDefinition = "TEXT NOT NULL")
+    private String description;
 
-        @ManyToOne
-        public Closet closet;
+    @Column(nullable = false)
+    private String material;
 
-        public Purse() {
-        }
+    @Column(nullable = false)
+    private String brand;
 
-        public Purse(long id, String title, String description) {
-            this.id = id;
-            this.title = title;
-            this.description = description;
-        }
+    @Column(nullable = false)
+    private String occasion;
 
-        public long getId() {
-            return id;
-        }
+    @ManyToOne
+    public Closet closet;
 
-        public void setId(long id) {
-            this.id = id;
-        }
+    public Purse() {
+    }
 
-        public String getTitle() {
-            return title;
-        }
+    public Purse(long id, String title, String description, String material, String brand, String occasion, Closet closet) {
+        this.id = id;
+        this.title = title;
+        this.description = description;
+        this.material = material;
+        this.brand = brand;
+        this.occasion = occasion;
+        this.closet = closet;
+    }
 
-        public void setTitle(String title) {
-            this.title = title;
-        }
+    public String getMaterial() {
+        return material;
+    }
 
-        public String getDescription() {
-            return description;
-        }
+    public void setMaterial(String material) {
+        this.material = material;
+    }
 
-        public void setDescription(String description) {
-            this.description = description;
-        }
+    public String getBrand() {
+        return brand;
+    }
+
+    public void setBrand(String brand) {
+        this.brand = brand;
+    }
+
+    public String getOccasion() {
+        return occasion;
+    }
+
+    public void setOccasion(String occasion) {
+        this.occasion = occasion;
+    }
+
+    public Closet getCloset() {
+        return closet;
+    }
+
+    public void setCloset(Closet closet) {
+        this.closet = closet;
+    }
+
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
 }

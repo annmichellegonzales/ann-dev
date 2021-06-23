@@ -13,19 +13,15 @@ public class Image {
     @Column(length = 1000)
     private String url;
 
-    @Column(nullable = false)
-    private boolean isReview;
-
     @ManyToOne()
     private Closet closet;
 
     public Image() {
     }
 
-    public Image(long id, String url, boolean isReview, Closet closet) {
+    public Image(long id, String url, Closet closet) {
         this.id = id;
         this.url = url;
-        this.isReview = isReview;
     }
 
     public long getId() {
@@ -42,14 +38,6 @@ public class Image {
 
     public void setUrl(String url) {
         this.url = url;
-    }
-
-    public boolean isReview() {
-        return isReview;
-    }
-
-    public void setReview(boolean review) {
-        isReview = review;
     }
 
     public Closet getCloset() {

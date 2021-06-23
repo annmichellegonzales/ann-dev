@@ -5,5 +5,4 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface ClosetRepository extends JpaRepository<Closet, Long> {
     Closet findByClosetName(String closetName);
-    Closet findByEmail(String email);
 }

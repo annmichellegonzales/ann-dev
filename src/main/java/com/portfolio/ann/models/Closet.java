@@ -14,23 +14,11 @@ public class Closet {
     @Column(nullable = false, unique = true)
     private String closetName;
 
-    @Column(nullable = false, unique = true)
-    private String email;
-
-    @Column(nullable = false)
-    private String password;
-
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "closet")
     private List<Dress> dressList;
 
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "closet")
     private List<Purse> purseList;
-
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "closet")
-    private List<Jewellery> jewelleryList;
-
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "closet")
-    private List<Makeup> makeupList;
 
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "closet")
     private List<Shoes> shoesList;
@@ -43,27 +31,35 @@ public class Closet {
     )
     private List<Category> closetCategories;
 
+    @ManyToMany(cascade = CascadeType.ALL)
+    @JoinTable(
+            name = "closet_seasons",
+            joinColumns = {@JoinColumn(name = "closet_id")},
+            inverseJoinColumns = {@JoinColumn(name = "season_id")}
+    )
+    private List<Season> closetSeasons;
+
+    @ManyToOne
+    public User user;
+
     public Closet() {
     }
 
     public Closet(Closet copy) {
         id = copy.id; // This line is SUPER important! Many things won't work if it's absent
-        email = copy.email;
         closetName = copy.closetName;
-        password = copy.password;
     }
 
-    public Closet(long id, String closetName, String email, String password, List<Dress> dressList, List<Purse> purseList, List<Jewellery> jewelleryList, List<Makeup> makeupList, List<Shoes> shoesList, List<Category> closetCategories) {
+
+    public Closet(long id, String closetName, List<Dress> dressList, List<Purse> purseList, List<Shoes> shoesList, List<Category> closetCategories, List<Season> closetSeasons, User user) {
         this.id = id;
         this.closetName = closetName;
-        this.email = email;
-        this.password = password;
         this.dressList = dressList;
         this.purseList = purseList;
-        this.jewelleryList = jewelleryList;
-        this.makeupList = makeupList;
         this.shoesList = shoesList;
         this.closetCategories = closetCategories;
+        this.closetSeasons = closetSeasons;
+        this.user = user;
     }
 
     public long getId() {
@@ -74,35 +70,59 @@ public class Closet {
         this.id = id;
     }
 
-    public String getUsername() {
+    public String getClosetName() {
         return closetName;
     }
 
-    public void setUsername(String username) {
-        this.closetName = username;
+    public void setClosetName(String closetName) {
+        this.closetName = closetName;
     }
 
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
-
-    public List<Dress> getPosts() {
+    public List<Dress> getDressList() {
         return dressList;
     }
 
-    public void setPosts(List<Dress> dressList) {
+    public void setDressList(List<Dress> dressList) {
         this.dressList = dressList;
+    }
+
+    public List<Purse> getPurseList() {
+        return purseList;
+    }
+
+    public void setPurseList(List<Purse> purseList) {
+        this.purseList = purseList;
+    }
+
+    public List<Shoes> getShoesList() {
+        return shoesList;
+    }
+
+    public void setShoesList(List<Shoes> shoesList) {
+        this.shoesList = shoesList;
+    }
+
+    public List<Category> getClosetCategories() {
+        return closetCategories;
+    }
+
+    public void setClosetCategories(List<Category> closetCategories) {
+        this.closetCategories = closetCategories;
+    }
+
+    public List<Season> getClosetSeasons() {
+        return closetSeasons;
+    }
+
+    public void setClosetSeasons(List<Season> closetSeasons) {
+        this.closetSeasons = closetSeasons;
+    }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
     }
 }
