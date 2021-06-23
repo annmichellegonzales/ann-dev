@@ -1,12 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Home</title>
+<!DOCTYPE html>
+<html id="home.html" xmlns:th="http://www.thymeleaf.org"
+      lang="en">
+<head th:replace="partials/head :: head('Home')">
+    <link rel="stylesheet" th:href="@{/main.css}">
 </head>
 <body>
 
 <h1>Hello, world!</h1>
 
+
+<script th:replace="partials/scripts :: scripts"></script>
 </body>
 </html>
