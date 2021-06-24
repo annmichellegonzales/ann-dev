@@ -10,19 +10,18 @@
 
 <h1>Prediction</h1>
 
-<div class="container mt-5 p-5" style="width: 22rem">
+<img src="/static/img/crystal.jpeg">
 
-    <div>
-        <img class="ring" src="https://d30y9cdsu7xlg0.cloudfront.net/png/307-200.png">
-    </div>
-    <br>
-    <h1 style="color: white">DinnerBell recommends: </h1>
+<img src="/static/img/ball.jpeg">
+
+
+<!--    <div>-->
+<!--        <img class="predict" src="/static/img/crystal.jpeg">-->
+<!--    </div>-->
     <a th:href="'/dress/title/' + ${dress.id}" th:text="${dress.title}"
        style="font-size: xx-large"></a>
     <br>
-    <a class="btn btn-dark" href="/exclusive-pick" role="button">Ask again</a>
-
-</div>
+    <a class="btn btn-dark" href="/prediction" role="button">Ask again</a>
 
 
 <script th:replace="partials/scripts :: scripts"></script>

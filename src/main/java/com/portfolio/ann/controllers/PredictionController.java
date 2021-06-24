@@ -17,14 +17,6 @@ public class PredictionController {
         this.dressRepo = dressRepo;
     }
 
-
-
-    @GetMapping("/prediction")
-    public String predictionResult() {
-        return "prediction";
-    }
-
-
     @GetMapping("/prediction")
     public String randomizeDbDresses(Model model){
         List<Dress> dresses = dressRepo.findAll();
