@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html id="weather.html" xmlns:th="http://www.thymeleaf.org"
+      lang="en">
+<head th:replace="partials/head :: head('Forecast')">
+    <link rel="stylesheet" th:href="@{/main.css}">
+</head>
+
+<body>
+<nav th:replace="partials/navbar :: navbar"></nav>
+
+<h1>Forecast</h1>
+
+<!--Display weather api-->
+<div id="display-map" class="d-flex justify-content-around mt-5"></div>
+<br>
+
+<!--&lt;!&ndash;Search&ndash;&gt;-->
+<!--<nav class="navbar navbar-light bg-light">-->
+<!--    <form class="form-inline">-->
+<!--        <input id="type-in" class="form-control mr-sm-2 mx-3" type="search" placeholder="Enter another location"-->
+<!--               aria-label="Search">-->
+<!--        <button id="button" class="btn btn-outline-primary my-2 my-sm-0" type="submit">Search</button>-->
+<!--    </form>-->
+<!--</nav>-->
+
+<!--&lt;!&ndash;Display map api&ndash;&gt;-->
+<!--<div class="coordinates" id='mapbox-map' style='width: 60%; height: 70vh; margin: 5vh auto;'></div>-->
+
+<p>Today's weather: </p>
+
+<script th:replace="partials/scripts :: scripts"></script>
+</body>
+</html>
