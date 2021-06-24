@@ -12,19 +12,20 @@ h1 {
     color: purple;
 }
 
-/*.predict {*/
-/*    animation: predict 0.5s steps(32) normal;*/
-/*    transform-origin: 50% 25%;*/
-/*}*/
+.predict {
+    width: 300px;
+    animation: predict 0.5s steps(32) normal;
+    transform-origin: 50% 25%;
+}
 
-/*@keyframes predict {*/
-/*    0%, 100% {*/
-/*        transform: rotate(0deg);*/
-/*    }*/
-/*    25% {*/
-/*        transform: rotate(15deg);*/
-/*    }*/
-/*    75% {*/
-/*        transform: rotate(-15deg);*/
-/*    }*/
-/*}*/
+@keyframes predict {
+    0%, 100% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(15deg);
+    }
+    75% {
+        transform: rotate(-15deg);
+    }
+}
