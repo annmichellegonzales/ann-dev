@@ -9,13 +9,16 @@
 <nav th:replace="partials/navbar :: navbar"></nav>
 
 <h1>Prediction</h1>
+<div style="text-align: center;">
+    <img class="predict" src="/img/crystalball.png">
 
-<img class="predict" src="/img/klipartz.com.png">
-
+    <p>I see you shall be wearing: </p>
     <a th:href="'/dress/title/' + ${dress.id}" th:text="${dress.title}"
        style="font-size: xx-large"></a>
     <br>
     <a class="btn btn-dark" href="/prediction" role="button">Ask again</a>
+
+</div>
 
 
 <script th:replace="partials/scripts :: scripts"></script>
