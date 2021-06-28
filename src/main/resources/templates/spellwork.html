@@ -10,7 +10,61 @@
 
 <h1>Spellwork</h1>
 
+<main class="container">
+  <div class="row">
+
+    <section class="col-12 col-lg-6">
+
+      <div id="shops" class="d-flex flex-wrap"></div>
+
+    </section>
+
+    <section class="col-12 col-md-6">
+
+      <form>
+        <div class="form-group text">
+          <label for="type-selection">Shop type</label>
+          <select class="form-control" id="type-selection">
+            <option>All</option>
+            <option>Witchy Fashion</option>
+            <option>Crypt</option>
+            <option>Tools</option>
+          </select>
+        </div>
+        <div class="form-group text">
+          <label for="shop-selection">Shop Name</label>
+          <input type="text" class="form-control autocomplete" id="shop-selection"
+                 placeholder="Shop Name">
+        </div>
+        <button type="submit" id="submit" class="btn btn-color">Submit</button>
+      </form>
+
+      <h3>New shop suggestion? Add it below...</h3>
+      <form>
+        <div class="form-group text">
+          <label for="type-selection-new">Shop type</label>
+          <select class="form-control" id="type-selection-new">
+            <option>All</option>
+            <option>Witchy Fashion</option>
+            <option>Crypt</option>
+            <option>Tools</option>
+          </select>
+        </div>
+        <div class="form-group text">
+          <label for="shop-new">Shop Name</label>
+          <input type="text" class="form-control autocomplete" id="shop-new"
+                 placeholder="Shop Name">
+        </div>
+        <button type="submit" id="submit-new" class="btn btn-color">Submit</button>
+      </form>
+
+    </section>
+
+  </div>
+</main>
+
 
 <script th:replace="partials/scripts :: scripts"></script>
+<script src="shopping.js"></script>
 </body>
 </html>
