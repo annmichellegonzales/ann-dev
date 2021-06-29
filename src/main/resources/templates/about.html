@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html id="about.html" xmlns:th="http://www.thymeleaf.org"
+      lang="en">
+<head th:replace="partials/head :: head('About')">
+  <link rel="stylesheet" th:href="@{/main.css}">
+</head>
+<body>
+<nav th:replace="partials/navbar :: navbar"></nav>
+
+<h1>About</h1>
+
+<p>Hi, I'm Ann.</p>
+
+
+<p>My name is Ann, and I love coding and gothic fashion! Instead of writing a fashion blog, I'm opting to code a fashion website
+  with all of my favorite fashion pieces straight from my crypt.</p>
+
+<script th:replace="partials/scripts :: scripts"></script>
+</body>
+</html>
