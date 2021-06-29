@@ -1,19 +1,14 @@
 package com.portfolio.ann.controllers;
 
-import com.portfolio.ann.models.Closet;
-import com.portfolio.ann.repositories.ClosetRepository;
+import com.portfolio.ann.repositories.ClosetRepo;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PostMapping;
 
 @Controller
 public class ClosetController {
 
-    private final ClosetRepository closetDao;
+    private final ClosetRepo closetDao;
 
-    public ClosetController(ClosetRepository closetDao) {
+    public ClosetController(ClosetRepo closetDao) {
         this.closetDao = closetDao;
     }
 
