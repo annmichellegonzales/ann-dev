@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html id="spellwork.html" xmlns:th="http://www.thymeleaf.org"
       lang="en">
-<head th:replace="partials/head :: head('Spellwork')">
+<head th:replace="partials/head :: head('Prediction')">
   <link rel="stylesheet" th:href="@{/main.css}">
 </head>
 
@@ -11,59 +11,60 @@
 <h1>Spellwork</h1>
 
 <main class="container">
-  <div class="row">
+    <div class="row">
 
-    <section class="col-12 col-lg-6">
+        <section class="col-12 col-lg-6">
 
-      <div id="shops" class="d-flex flex-wrap"></div>
+            <div id="shops" class="d-flex flex-wrap"></div>
 
-    </section>
+        </section>
 
-    <section class="col-12 col-md-6">
+        <section class="col-12 col-md-6">
 
-      <form>
-        <div class="form-group text">
-          <label for="type-selection">Shop type</label>
-          <select class="form-control" id="type-selection">
-            <option>All</option>
-            <option>Witchy Fashion</option>
-            <option>Crypt</option>
-            <option>Tools</option>
-          </select>
-        </div>
-        <div class="form-group text">
-          <label for="shop-selection">Shop Name</label>
-          <input type="text" class="form-control autocomplete" id="shop-selection"
-                 placeholder="Shop Name">
-        </div>
-        <button type="submit" id="submit" class="btn btn-color">Submit</button>
-      </form>
+            <form>
+                <div class="form-group text">
+                    <label for="type-selection">Shop type</label>
+                    <select class="form-control" id="type-selection">
+                        <option>All</option>
+                        <option>Witchy Fashion</option>
+                        <option>Crypt</option>
+                        <option>Tools</option>
+                    </select>
+                </div>
+                <div class="form-group text">
+                    <label for="shop-selection">Shop Name</label>
+                    <input type="text" class="form-control autocomplete" id="shop-selection"
+                           placeholder="Shop Name">
+                </div>
+                <button type="submit" id="submit" class="btn btn-dark">Submit</button>
+            </form>
 
-      <h3>New shop suggestion? Add it below...</h3>
-      <form>
-        <div class="form-group text">
-          <label for="type-selection-new">Shop type</label>
-          <select class="form-control" id="type-selection-new">
-            <option>All</option>
-            <option>Witchy Fashion</option>
-            <option>Crypt</option>
-            <option>Tools</option>
-          </select>
-        </div>
-        <div class="form-group text">
-          <label for="shop-new">Shop Name</label>
-          <input type="text" class="form-control autocomplete" id="shop-new"
-                 placeholder="Shop Name">
-        </div>
-        <button type="submit" id="submit-new" class="btn btn-color">Submit</button>
-      </form>
+            <h3>New shop suggestion? Add it below...</h3>
+            <form>
+                <div class="form-group text">
+                    <label for="type-selection-new">Shop type</label>
+                    <select class="form-control" id="type-selection-new">
+                        <option>All</option>
+                        <option>Witchy Fashion</option>
+                        <option>Crypt</option>
+                        <option>Tools</option>
+                    </select>
+                </div>
+                <div class="form-group text">
+                    <label for="shop-new">Shop Name</label>
+                    <input type="text" class="form-control autocomplete" id="shop-new"
+                           placeholder="Shop Name">
+                </div>
+                <button type="submit" id="submit-new" class="btn btn-dark">Submit</button>
+            </form>
 
-    </section>
+        </section>
 
-  </div>
+    </div>
 </main>
 
 
 <script th:replace="partials/scripts :: scripts"></script>
+<script src="/js/shopping.js"></script>
 </body>
 </html>

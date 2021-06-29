@@ -59,9 +59,6 @@ function newShopping(e) {
 }
 
 
-
-
-// from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
 let shops = [
     {id: 1, name: 'KillStar', type: 'witchy fashion'},
     {id: 2, name: 'Foxblood', type: 'witchy fashion'},
