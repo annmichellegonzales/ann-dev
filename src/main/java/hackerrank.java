@@ -1,3 +1,6 @@
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.Scanner;
 
 public class hackerrank {
@@ -33,19 +36,43 @@ public class hackerrank {
 //        }
 //    }
 
-    public static void main(String[] args) {
-        Scanner scan = new Scanner(System.in);
-        int i = scan.nextInt();
-        double d = scan.nextDouble();
-        scan.nextLine();
-        String s = scan.nextLine();
-        scan.close();
+//    public static void main(String[] args) {
+//        Scanner scan = new Scanner(System.in);
+//        int i = scan.nextInt();
+//        double d = scan.nextDouble();
+//        scan.nextLine();
+//        String s = scan.nextLine();
+//        scan.close();
+//
+//        // Write your code here.
+//
+//        System.out.println("String: " + s);
+//        System.out.println("Double: " + d);
+//        System.out.println("Int: " + i);
+//    }
 
-        // Write your code here.
+//    public static void main(String[] args) throws IOException {
+//        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
+//
+//        int N = Integer.parseInt(bufferedReader.readLine().trim());
+//
+//        bufferedReader.close();
+//        for(int i =1; i<=10; i++) {
+//            System.out.println(N + " " + "x" + " " + i + " " + "=" + " " + N*i);
+//        }
+//    }
+//
+////    OR
+//
+//        public static void main(String[] args) {
+//            Scanner in = new Scanner(System.in);
+//            int N = in.nextInt();
+//
+//            for(int i = 1; i <= 10; i++){
+//
+//                System.out.printf("%d x %d = %d%n", N, i, N*i);
+//            }
+//        }
 
-        System.out.println("String: " + s);
-        System.out.println("Double: " + d);
-        System.out.println("Int: " + i);
-    }
 
 }
