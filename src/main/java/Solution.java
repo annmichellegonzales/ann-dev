@@ -45,6 +45,9 @@ class Result {
             System.out.printf("%.6f \n", r);
         }
     }
+
+    public static void miniMaxSum(List<Integer> arr) {
+    }
 }
 
 public class Solution {
