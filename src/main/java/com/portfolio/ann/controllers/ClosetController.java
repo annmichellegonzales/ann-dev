@@ -6,10 +6,7 @@ import org.springframework.stereotype.Controller;
 @Controller
 public class ClosetController {
 
-    private final ClosetRepo closetDao;
-
     public ClosetController(ClosetRepo closetDao) {
-        this.closetDao = closetDao;
     }
 
 //    @GetMapping("/closet/create")
